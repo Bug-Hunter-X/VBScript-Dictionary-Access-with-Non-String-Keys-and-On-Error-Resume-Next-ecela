@@ -1,0 +1,3 @@
+This repository demonstrates a subtle bug in VBScript related to dictionary access when using `On Error Resume Next`.  The `bug.vbs` file shows the problematic code, which uses a function to safely access dictionary values. However, it fails to explicitly handle errors when providing a non-string key to the dictionary. The `bugSolution.vbs` file presents a corrected version.
+
+The issue lies in how VBScript handles errors and type mismatches when accessing dictionary items. The `On Error Resume Next` statement suppresses the error, leading to an incorrect 'Null' value instead of an appropriate error indication when a non-string key is used.
